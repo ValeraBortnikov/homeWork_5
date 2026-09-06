@@ -56,10 +56,10 @@ public class Main {
         }
 
         // Задача № 5
-        int monthNumber = 12;
+        int monthNumber = 13;
 
         // Решение № 1 без указания месяца в выводе
-        if (monthNumber > 0 && monthNumber <= 12) {
+        if (monthNumber >= 1 && monthNumber <= 12) {
             switch (monthNumber) {
                 case 1, 2, 12:
                     System.out.println("На улице зима");
@@ -75,51 +75,7 @@ public class Main {
                     break;
             }
         } else {
-            System.out.println("Выбранный месяц не входит в диапозон от 1 (Январь) до 12 (Декабрь)");
+            System.out.println("Выбранный месяц не входит в диапазон от 1 (Январь) до 12 (Декабрь)");
         }
-
-        // Решение № 2 с указанием месяца в выводе
-        /*if (monthNumber > 0 && monthNumber <= 12) {
-            switch (monthNumber) {
-                case 1:
-                    System.out.println("На улице зима, месяц Январь");
-                    break;
-                case 2:
-                    System.out.println("На улице зима, месяц Февраль");
-                    break;
-                case 12:
-                    System.out.println("На улице зима, месяц Декабрь");
-                    break;
-                case 3:
-                    System.out.println("На улице весна, месяц Март");
-                    break;
-                case 4:
-                    System.out.println("На улице весна, месяц Апрель");
-                    break;
-                case 5:
-                    System.out.println("На улице весна, месяц Май");
-                    break;
-                case 6:
-                    System.out.println("На улице лето, месяц Июнь");
-                    break;
-                case 7:
-                    System.out.println("На улице лето, месяц Июль");
-                    break;
-                case 8:
-                    System.out.println("На улице лето, месяц Август");
-                    break;
-                case 9:
-                    System.out.println("На улице осень, месяц Сентябрь");
-                    break;
-                case 10:
-                    System.out.println("На улице осень, месяц Октябрь");
-                    break;
-                case 11:
-                    System.out.println("На улице осень, месяц Ноябрь");
-                    break;
-            }
-        } else {
-            System.out.println("Выбранный месяц не входит в диапозон от 1 (Январь) до 12 (Декабрь)");
-        }*/
     }
 }
