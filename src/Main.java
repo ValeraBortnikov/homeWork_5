@@ -6,15 +6,12 @@ public class Main {
         // Задачи № 1
         byte clientOS = 0;
 
-        switch (clientOS) {
-            case 0:
-                System.out.println("Установите версию приложения для iOS по ссылке");
-                break;
-            case 1:
-                System.out.println("Установите версию приложения для Android по ссылке");
-                break;
-            default:
-                System.out.println("Не удалось определить операционную систему");
+        if (clientOS == 0) {
+            System.out.println("Установите версию приложения для iOS по ссылке");
+        } else if (clientOS == 1) {
+            System.out.println("Установите версию приложения для Android по ссылке");
+        } else {
+            System.out.println("Не удалось определить операционную систему");
         }
 
         // Задача № 2
@@ -37,7 +34,7 @@ public class Main {
 
         if (year <= 1584) {
             System.out.println("Год должен быть больше значения 1584");
-        } else if ((year % 400 == 0 || year % 4 == 0) && year % 100 != 0) {
+        } else if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)) {
             System.out.println(year + " год является високосным");
         } else {
             System.out.println(year + " год не является високосным");
@@ -45,21 +42,17 @@ public class Main {
 
         // Задача № 4
         int deliveryDistance = 95;
-        int deliveryTime = 0;
 
-        if (deliveryDistance <= 20) {
-            deliveryTime += 1;
+        if (deliveryDistance < 0) {
+            System.out.println("Дистанция не может содержать отрицательное значение");
+        } else if (deliveryDistance <= 20) {
+            System.out.println("Потребуется дней: " + 1);
         } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
-            deliveryTime += 2;
+            System.out.println("Потребуется дней: " + 2);
         } else if (deliveryDistance > 60 && deliveryDistance <= 100) {
-            deliveryTime += 3;
-        }
-
-        switch (deliveryTime) {
-            case 0:
-                System.out.println("Доставка не осуществляется");
-            default:
-                System.out.println("Потребуется дней: " + deliveryTime);
+            System.out.println("Потребуется дней: " + 3);
+        } else {
+            System.out.println("Доставка не осуществляется");
         }
 
         // Задача № 5
@@ -81,11 +74,12 @@ public class Main {
                     System.out.println("На улице осень");
                     break;
             }
+        } else {
+            System.out.println("Выбранный месяц не входит в диапозон от 1 (Январь) до 12 (Декабрь)");
         }
 
         // Решение № 2 с указанием месяца в выводе
-        /*
-        if (monthNumber > 0 && monthNumber <= 12) {
+        /*if (monthNumber > 0 && monthNumber <= 12) {
             switch (monthNumber) {
                 case 1:
                     System.out.println("На улице зима, месяц Январь");
@@ -124,7 +118,8 @@ public class Main {
                     System.out.println("На улице осень, месяц Ноябрь");
                     break;
             }
+        } else {
+            System.out.println("Выбранный месяц не входит в диапозон от 1 (Январь) до 12 (Декабрь)");
         }*/
-
     }
 }
